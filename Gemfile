@@ -38,6 +38,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'flay'
   gem 'flog'
+  gem 'rails-controller-testing'
   gem 'reek'
   gem 'rspec-rails'
   gem 'rubocop-rails'
