@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class AchievementsController < ApplicationController
+  def index
+    @achievements = Achievement.public_access
+  end
+
   def show
     @achievement = Achievement.find(params[:id])
   end
@@ -16,6 +20,24 @@ class AchievementsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @achievement = Achievement.find(params[:id])
+  end
+
+  def update
+    @achievement = Achievement.find(params[:id])
+    if @achievement.update(achievement_params)
+      redirect_to achievement_path(@achievement)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    Achievement.destroy(params[:id])
+    redirect_to achievements_path
   end
 
   private
