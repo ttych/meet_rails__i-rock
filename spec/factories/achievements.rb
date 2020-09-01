@@ -5,6 +5,7 @@ FactoryBot.define do
     # privacy { Achievement.privacies[:private_access] }
     featured { false }
     cover_image { "some_file.png" }
+    user
 
     factory :public_achievement do
       privacy { :public_access }
