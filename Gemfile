@@ -59,7 +59,7 @@ group :test do
   gem 'capybara'
   gem 'cucumber-rails', require: false
   # gem 'database_cleaner'
-  gem 'database_cleaner-active_record'
+  # gem 'database_cleaner-active_record'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

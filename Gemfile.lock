@@ -107,7 +107,6 @@ GEM
       cucumber-core (~> 7.0, >= 7.0.0)
       cucumber-cucumber-expressions (~> 10.1, >= 10.1.0)
       cucumber-messages (~> 12.1, >= 12.1.1)
-    database_cleaner (1.8.5)
     diff-lcs (1.4.4)
     erubi (1.9.0)
     erubis (2.7.0)
@@ -315,7 +314,6 @@ DEPENDENCIES
   byebug
   capybara
   cucumber-rails
-  database_cleaner
   factory_bot_rails
   flay
   flog
