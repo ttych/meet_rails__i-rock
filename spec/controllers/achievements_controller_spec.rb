@@ -3,7 +3,6 @@
 require 'rails_helper'
 
 describe AchievementsController, type: :controller do
-
   shared_examples 'public access to achievements' do
     describe 'GET index' do
       it 'renders :index template' do
@@ -37,7 +36,6 @@ describe AchievementsController, type: :controller do
   end
 
   describe 'guest user' do
-
     it_behaves_like  'public access to achievements'
 
     describe 'GET new' do
@@ -76,14 +74,14 @@ describe AchievementsController, type: :controller do
     end
   end
 
-  describe "authenticated user" do
+  describe 'authenticated user' do
     let(:user) { FactoryBot.create(:user) }
 
     before do
       sign_in(user)
     end
 
-    it_behaves_like  'public access to achievements'
+    it_behaves_like 'public access to achievements'
 
     describe 'GET index' do
       it 'renders :index template' do
@@ -179,7 +177,6 @@ describe AchievementsController, type: :controller do
           expect(response).to redirect_to(achievements_path)
         end
       end
-
     end
 
     context 'when is the owner of the achievement' do

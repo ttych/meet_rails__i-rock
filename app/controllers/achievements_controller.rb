@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class AchievementsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-  before_action :owners_only, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: %i[new create edit update destroy]
+  before_action :owners_only, only: %i[edit update destroy]
 
   def index
     @achievements = Achievement.public_access
@@ -19,14 +19,14 @@ class AchievementsController < ApplicationController
   def create
     @achievement = Achievement.new(**achievement_params, user: current_user)
     if @achievement.save
+      UserMailer.achievement_created(current_user.email, @achievement.id).deliver_now
       redirect_to achievement_url(@achievement), notice: 'Achievement has been created'
     else
       render :new
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @achievement.update(achievement_params)
@@ -49,8 +49,6 @@ class AchievementsController < ApplicationController
 
   def owners_only
     @achievement = Achievement.find(params[:id])
-    if current_user != @achievement.user
-      redirect_to achievements_path
-    end
+    redirect_to achievements_path if current_user != @achievement.user
   end
 end
