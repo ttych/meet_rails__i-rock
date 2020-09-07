@@ -45,7 +45,7 @@ describe AchievementsController, type: :controller do
       end
     end
 
-    describe 'POST create' do
+    describe 'POST create', :vcr do
       it 'redirects to login page' do
         post :create, params: { achievement: FactoryBot.attributes_for(:public_achievement) }
         expect(response).to redirect_to(new_user_session_url)
@@ -125,7 +125,7 @@ describe AchievementsController, type: :controller do
       end
     end
 
-    describe 'POST create' do
+    describe 'POST create', :vcr do
       context 'with valid achievement' do
         let(:valid_achievement) { FactoryBot.attributes_for(:public_achievement) }
 

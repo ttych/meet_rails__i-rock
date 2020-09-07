@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/statuses/update.json
+    body:
+      encoding: UTF-8
+      string: status=Achievement+7
+    headers:
+      User-Agent:
+      - TwitterRubyGem/7.0.0
+      Authorization:
+      - OAuth oauth_consumer_key="YMeFRLf7b6OH89uVgqz7QKdFq", oauth_nonce="85cecff072fd22740b1fccc5d7566289",
+        oauth_signature="DHT0ZPynKJxz2u8pXFj1uMcLVx4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1599494706", oauth_token="933644338743136256-9CLdnzIERE0qgjt5A3iFSzdZGeoh4vZ",
+        oauth_version="1.0"
+      Connection:
+      - close
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - api.twitter.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Connection:
+      - close
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '1777'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Mon, 07 Sep 2020 16:05:06 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Mon, 07 Sep 2020 16:05:06 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_o
+      Set-Cookie:
+      - guest_id=v1%3A159949470657468735; Max-Age=63072000; Expires=Wed, 7 Sep 2022
+        16:05:06 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+      - lang=en; Path=/
+      - personalization_id="v1_tsRtjPoUrdlC3cI2gX/93g=="; Max-Age=63072000; Expires=Wed,
+        7 Sep 2022 16:05:06 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write-directmessages
+      X-Connection-Hash:
+      - 6d5d6a0dd55ae124e7493d0bb53d5603
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '220'
+      X-Transaction:
+      - 0076e3bf00b1e3c6
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"Mon Sep 07 16:05:06 +0000 2020","id":1303001356253396993,"id_str":"1303001356253396993","text":"Achievement
+        7","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"source":"","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":933644338743136256,"id_str":"933644338743136256","name":"ThomasTych","screen_name":"ThomasTych","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":2,"friends_count":70,"listed_count":0,"created_at":"Thu
+        Nov 23 10:32:11 +0000 2017","favourites_count":23,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":6,"lang":null,"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_normal.png","profile_link_color":"1DA1F2","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false,"translator_type":"none"},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"favorited":false,"retweeted":false,"lang":"en"}'
+  recorded_at: Mon, 07 Sep 2020 16:05:06 GMT
+recorded_with: VCR 6.0.0

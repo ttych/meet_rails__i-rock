@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
   resources :achievements
+
+  namespace :api do
+    resources :achievements, only: [:index]
+  end
 end

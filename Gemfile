@@ -32,7 +32,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'carrierwave'
 gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'jsonapi-rails'
 gem 'redcarpet'
+gem 'twitter'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -63,6 +65,8 @@ group :test do
   # gem 'database_cleaner'
   # gem 'database_cleaner-active_record'
   gem 'shoulda-matchers', '~> 4.0'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
